@@ -1,0 +1,83 @@
+.container-fluid {
+  @include makeContainer();
+  
+  &.is-debug {
+    .flex-row{
+      > .col,
+      > [class*='col-'] {
+        border: 1px solid rgba($darkGrey, .35);
+        background-color: rgba($lightGrey, .35);
+      }
+    } 
+  }
+}
+
+.flex-row {
+  @include makeRow();
+}
+
+.col,
+[class*='col-'] {
+  @include flex(0 0 auto);
+  box-sizing: border-box;
+  @include makeColReady();
+}
+
+
+@for $i from 0 through $gridSmColumns {
+  .col-sm-#{$i} {
+    @include makeCol($i, $gridSmColumns);
+  }
+
+  .offset-sm-#{$i} {
+    @include makeColOffset($i, $gridSmColumns);
+  }
+
+  .order-sm-first {
+    order: -1;
+  }
+
+  .order-sm-last {
+    order: $gridSmColumns + 1;
+  }
+
+  .order-sm-#{$i} {
+    order: $i;
+  }
+}
+
+
+@media only screen and (min-width: $breakPointsLg) {
+  @for $i from 0 through $gridLgColumns {
+    .col-lg-#{$i} {
+      @include makeCol($i, $gridLgColumns);
+    }
+
+    .offset-lg-#{$i} {
+      @include makeColOffset($i, $gridLgColumns);
+    }
+
+    .order-lg-first {
+      order: -1;
+    }
+
+    .order-lg-last {
+      order: $gridLgColumns + 1;
+    }
+
+    .order-lg-#{$i} {
+      order: $i;
+    }
+    
+  }
+}
+
+.col {
+  @include flex-grow(1);
+  @include flex-basis(0);
+  max-width: 100%;
+}
+
+.w-100 {
+  width: 100% !important;
+}

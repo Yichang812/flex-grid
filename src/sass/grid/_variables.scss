@@ -1,0 +1,41 @@
+$gridGutterWidth: 12px;
+
+$containerMinWidth: 600px;
+$containerMaxWidth: 1344px;
+
+$breakPointsLg: 1024px;
+
+$gridSmColumns: 8;
+$gridLgColumns: 12;
+
+// New color names
+
+$white:       #fff;
+$lightGrey:  #F4F4F4;
+$mediumGrey: #dfdfdf;
+$darkGrey:   #6d6e6e;
+$black:       #000;
+
+$error:       #ba4242;
+$success:     #00c8b4;
+
+
+// New font styles
+$fontSizeBase:              1rem !default; // typically `16px`
+$fontSizeLg:                ($fontSizeBase * 1.25) !default;
+$fontSizeSm:                ($fontSizeBase * .875) !default;
+
+$fontWeightNormal:          400 !default;
+$fontWeightBold:            700 !default;
+$fontWeightBase:            $fontWeightNormal !default;
+
+$lineHeightBase:            1.5 !default;
+$headingsLineHeight:        1.2 !default;
+
+
+// Footer
+$footerPrimaryColor: $black;
+$footerSecondaryColor: $darkGrey;
+$footerInvertedColor: $white;
+
+$footerDarkBg: $black;

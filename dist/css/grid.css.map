@@ -1,0 +1,18 @@
+{
+	"version": 3,
+	"file": "grid.css",
+	"sources": [
+		"../../src/sass/grid/index.scss",
+		"../../src/sass/grid/_variables.scss",
+		"../../src/sass/grid/_flex.scss",
+		"../../src/sass/grid/_grid.scss"
+	],
+	"sourcesContent": [
+		"@import \"variables\";\n@import \"flex\";\n@import \"grid\";\n\n",
+		"$gridContainerWidthMax:   1344px;\n$gridContainerWidthMin:   600px;",
+		"@mixin flexbox {\n  display: -webkit-box;\n  display: -moz-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n}",
+		""
+	],
+	"names": [],
+	"mappings": ""
+}

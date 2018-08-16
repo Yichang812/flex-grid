@@ -1,0 +1,14 @@
+{
+  "name": "flex-grid",
+  "version": "1.0.0",
+  "description": "grid implemented by flexbox",
+  "main": "index.js",
+  "author": "Yichang Li",
+  "private": false,
+  "scripts": {
+    "sass": "node-sass ./src/sass/grid/index.scss ./dist/css/grid.css --output-style expanded -w"
+  },
+  "devDependencies": {
+    "node-sass": "^4.9.2"
+  }
+}
